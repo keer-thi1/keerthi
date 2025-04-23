@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {  Linkedin, Mail, ExternalLink, User, Briefcase, Code, Award, Download, Moon, Sun } from 'lucide-react';
-
+//  keerthi
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
