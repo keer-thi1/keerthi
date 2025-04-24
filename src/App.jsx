@@ -421,7 +421,7 @@ function App() {
               {
                 title: "E-commerce Website",
                 description: "A fully responsive e-commerce platform built with React.js and Tailwind CSS, featuring product filtering, shopping cart, and checkout functionality.",
-                image: "src/assets/images/ecom.png",
+                image:me,
                 tech: ["React.js", "Tailwind CSS", "Redux", "Firebase"]
               },
               {
