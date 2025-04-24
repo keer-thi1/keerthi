@@ -3,6 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {  Linkedin, Mail, ExternalLink, User, Briefcase, Code, Award, Download, Moon, Sun } from 'lucide-react';
 import abt from './assets/images/ecom.png';
 import me from './assets/images/me.png';
+import aa from './assets/images/ecom.png';
+import bb from './assets/images/taskma.png';
+import cc from './assets/images/portfolio.png';
+import dd from './assets/images/weather.png';
+import ee from './assets/images/recipe.png';
+import ff from './assets/images/dashboard.png';
 //  keerthi
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -421,37 +427,37 @@ function App() {
               {
                 title: "E-commerce Website",
                 description: "A fully responsive e-commerce platform built with React.js and Tailwind CSS, featuring product filtering, shopping cart, and checkout functionality.",
-                image:me,
+                image:aa,
                 tech: ["React.js", "Tailwind CSS", "Redux", "Firebase"]
               },
               {
                 title: "Task Management App",
                 description: "A drag-and-drop task management application with user authentication, task categories, and progress tracking.",
-                image: "src/assets/images/taskma.png",
+                image:bb,
                 tech: ["React.js", "TypeScript", "Firebase", "Framer Motion"]
               },
               {
                 title: "Portfolio Website",
                 description: "A creative portfolio website for a digital artist, featuring smooth animations and an image gallery.",
-                image: "src/assets/images/portfolio.png",
+                image:cc,
                 tech: ["Next.js", "Tailwind CSS", "Framer Motion"]
               },
               {
                 title: "Weather Dashboard",
                 description: "A weather application that displays current weather and forecasts for multiple locations, with interactive charts.",
-                image: "src/assets/images/weather.png",
+                image:dd,
                 tech: ["React.js", "Tailwind CSS", "Chart.js", "OpenWeather API"]
               },
               {
                 title: "Recipe Finder",
                 description: "A web application for finding recipes based on available ingredients, with filtering options and saving favorites.",
-                image: "src/assets/images/recipe.png",
+                image:ee,
                 tech: ["React.js", "CSS Modules", "Recipe API"]
               },
               {
                 title: "Social Media Dashboard",
                 description: "An admin dashboard for managing social media accounts, with analytics, content scheduling, and engagement tracking.",
-                image: "src/assets/images/dashboard.png",
+                image:ff,
                 tech: ["React.js", "Tailwind CSS", "Redux", "Chart.js"]
               }
             ].map((project, index) => (
