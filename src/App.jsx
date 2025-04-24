@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {  Linkedin, Mail, ExternalLink, User, Briefcase, Code, Award, Download, Moon, Sun } from 'lucide-react';
+import abt from './assets/images/ecom.png';
+import me from './assets/images/me.png';
 //  keerthi
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -175,7 +177,7 @@ function App() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              John Doe
+              Ravi Keerthi Reddy
             </motion.h1>
             <motion.p 
               className="text-xl md:text-2xl mb-6"
@@ -235,7 +237,7 @@ function App() {
               className={`relative rounded-full w-64 h-64 md:w-80 md:h-80 overflow-hidden border-4 ${darkMode ? 'border-blue-600' : 'border-blue-500'}`}
             >
               <img 
-                src="/api/placeholder/400/400" 
+                src={me} 
                 alt="Profile" 
                 className="object-cover w-full h-full"
               />
@@ -244,109 +246,104 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section 
-        id="about" 
-        className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
-      >
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeInUp}
-            className="mb-12 text-center"
-          >
-            <h2 className="text-3xl font-bold mb-2">About Me</h2>
-            <div className={`h-1 w-20 mx-auto ${darkMode ? 'bg-blue-500' : 'bg-blue-600'}`}></div>
-          </motion.div>
-          
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <motion.div 
-              className="md:w-1/3"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeInUp}
-            >
-              <div className={`relative rounded-lg overflow-hidden shadow-xl ${darkMode ? 'shadow-gray-700' : 'shadow-gray-300'}`}>
-                <img 
-                  src="/api/placeholder/600/800" 
-                  alt="About Me" 
-                  className="w-full h-auto"
-                />
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="md:w-2/3"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeInUp}
-            >
-              <h3 className="text-2xl font-semibold mb-4">Who am I?</h3>
-              <p className="mb-4">
-                I'm a passionate Frontend Developer with 5 years of experience creating modern and responsive web applications. 
-                My journey in web development started in 2018, and since then, I've been constantly learning and improving my skills.
-              </p>
-              <p className="mb-6">
-                I specialize in React.js, Tailwind CSS, and modern JavaScript. I love creating intuitive user interfaces and smooth user experiences. 
-                My approach combines clean code with creative design to build applications that are both functional and beautiful.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div>
-                  <h4 className="font-semibold mb-2">Name:</h4>
-                  <p>John Doe</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Email:</h4>
-                  <p>john.doe@example.com</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">From:</h4>
-                  <p>San Francisco, CA</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Experience:</h4>
-                  <p>5+ Years</p>
-                </div>
-              </div>
-              
-              <motion.div className="flex gap-4">
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center ${darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}
-                >
-                  {/* <GitHub size={20} /> */}
-                </motion.a>
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center ${darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}
-                >
-                  <Linkedin size={20} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center ${darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}
-                >
-                  <Mail size={20} />
-                </motion.a>
-              </motion.div>
-            </motion.div>
+    {/* About Section */}
+<section 
+  id="about" 
+  className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
+>
+  <div className="container mx-auto px-4 max-w-4xl">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+      className="mb-12 text-center"
+    >
+      <h2 className="text-3xl font-bold mb-2">About Me</h2>
+      <div className={`h-1 w-20 mx-auto ${darkMode ? 'bg-blue-500' : 'bg-blue-600'}`}></div>
+    </motion.div>
+    
+    <motion.div 
+      className="w-full"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+    >
+      <div className="text-center">
+        <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+          Who am I?
+        </h3>
+        
+        <div className={`p-6 rounded-xl ${darkMode ? 'bg-gray-700/30' : 'bg-gray-100'} mb-8`}>
+          <p className="mb-4 text-lg leading-relaxed">
+            I'm a passionate Frontend Developer currently pursuing BTech in 
+            Information Technology at Sreenidhi Institute of Science and Technology.
+            My journey in web development started recently, and I've been 
+            enthusiastically learning and improving my skills every day.
+          </p>
+          <p className="text-lg leading-relaxed">
+            I specialize in React.js, Tailwind CSS, and modern JavaScript. 
+            I love creating intuitive user interfaces and smooth user experiences, 
+            combining clean code with creative design to build applications that 
+            are both functional and beautiful.
+          </p>
+        </div>
+        
+        {/* Personal Info Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
+          <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-700/50' : 'bg-gray-100'} text-center`}>
+            <h4 className="font-semibold mb-1">Name:</h4>
+            <p>Ravi Keerthi Reddy</p>
+          </div>
+          <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-700/50' : 'bg-gray-100'} text-center`}>
+            <h4 className="font-semibold mb-1">Email:</h4>
+            <p>ravikeerthireddyr@gmail.com</p>
+          </div>
+          <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-700/50' : 'bg-gray-100'} text-center`}>
+            <h4 className="font-semibold mb-1">Location:</h4>
+            <p>Hyderabad, India</p>
+          </div>
+          <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-700/50' : 'bg-gray-100'} text-center`}>
+            <h4 className="font-semibold mb-1">Education:</h4>
+            <p>BTech in IT</p>
           </div>
         </div>
-      </section>
+        
+        {/* Social Links */}
+        <motion.div className="flex gap-4 justify-center">
+          <motion.a
+            href="#"
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            className={`w-12 h-12 rounded-full flex items-center justify-center ${darkMode ? 'bg-gray-700 hover:bg-blue-600' : 'bg-gray-200 hover:bg-blue-500'} transition-colors`}
+          >
+            <Code size={24} className={darkMode ? 'text-white' : 'text-gray-800'} />
+          </motion.a>
+          <motion.a
+            href="#"
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            className={`w-12 h-12 rounded-full flex items-center justify-center ${darkMode ? 'bg-gray-700 hover:bg-blue-600' : 'bg-gray-200 hover:bg-blue-500'} transition-colors`}
+          >
+            <Linkedin size={24} className={darkMode ? 'text-white' : 'text-gray-800'} />
+          </motion.a>
+          <motion.a
+            href="#"
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            className={`w-12 h-12 rounded-full flex items-center justify-center ${darkMode ? 'bg-gray-700 hover:bg-blue-600' : 'bg-gray-200 hover:bg-blue-500'} transition-colors`}
+          >
+            <Mail size={24} className={darkMode ? 'text-white' : 'text-gray-800'} />
+          </motion.a>
+        </motion.div>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
-      {/* Skills Section */}
-      <section 
+           {/* Skills Section */}
+           <section 
         id="skills" 
         className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}
       >
@@ -373,41 +370,26 @@ function App() {
             viewport={{ once: true, amount: 0.1 }}
           >
             {[
-              { name: "HTML5", percentage: 95 },
-              { name: "CSS3", percentage: 90 },
-              { name: "JavaScript", percentage: 85 },
-              { name: "React.js", percentage: 90 },
-              { name: "Tailwind CSS", percentage: 85 },
-              { name: "TypeScript", percentage: 75 },
-              { name: "Next.js", percentage: 80 },
-              { name: "Framer Motion", percentage: 70 },
-              { name: "Git", percentage: 85 },
-              { name: "Figma", percentage: 80 },
-              { name: "Node.js", percentage: 65 },
-              { name: "Responsive Design", percentage: 90 }
+              "HTML5", "CSS3", "JavaScript", "React.js", 
+              "Tailwind CSS", "TypeScript", "Next.js", "Framer Motion",
+              "Git", "Figma", "Node.js", "Responsive Design"
             ].map((skill, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className={`p-6 rounded-lg ${darkMode ? 'bg-gray-800 shadow-md' : 'bg-white shadow-md'}`}
+                whileHover={{ scale: 1.05 }}
+                className={`p-6 rounded-lg flex flex-col items-center ${darkMode ? 'bg-gray-800 shadow-md' : 'bg-white shadow-md'}`}
               >
-                <h3 className="font-semibold mb-4 text-lg">{skill.name}</h3>
-                <div className={`w-full h-2 rounded-full ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
-                  <motion.div
-                    className={`h-full rounded-full ${darkMode ? 'bg-blue-500' : 'bg-blue-600'}`}
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.percentage}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.2 }}
-                  ></motion.div>
+                <div className={`w-16 h-16 rounded-full ${darkMode ? 'bg-blue-500' : 'bg-blue-600'} flex items-center justify-center mb-4`}>
+                  <Code size={32} className="text-white" />
                 </div>
-                <p className="mt-2 text-sm text-right">{skill.percentage}%</p>
+                <h3 className="font-semibold text-lg text-center">{skill}</h3>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
-
+      
       {/* Projects Section */}
       <section 
         id="projects" 
@@ -439,37 +421,37 @@ function App() {
               {
                 title: "E-commerce Website",
                 description: "A fully responsive e-commerce platform built with React.js and Tailwind CSS, featuring product filtering, shopping cart, and checkout functionality.",
-                image: "/api/placeholder/600/400",
+                image: "src/assets/images/ecom.png",
                 tech: ["React.js", "Tailwind CSS", "Redux", "Firebase"]
               },
               {
                 title: "Task Management App",
                 description: "A drag-and-drop task management application with user authentication, task categories, and progress tracking.",
-                image: "/api/placeholder/600/400",
+                image: "src/assets/images/taskma.png",
                 tech: ["React.js", "TypeScript", "Firebase", "Framer Motion"]
               },
               {
                 title: "Portfolio Website",
                 description: "A creative portfolio website for a digital artist, featuring smooth animations and an image gallery.",
-                image: "/api/placeholder/600/400",
+                image: "src/assets/images/portfolio.png",
                 tech: ["Next.js", "Tailwind CSS", "Framer Motion"]
               },
               {
                 title: "Weather Dashboard",
                 description: "A weather application that displays current weather and forecasts for multiple locations, with interactive charts.",
-                image: "/api/placeholder/600/400",
+                image: "src/assets/images/weather.png",
                 tech: ["React.js", "Tailwind CSS", "Chart.js", "OpenWeather API"]
               },
               {
                 title: "Recipe Finder",
                 description: "A web application for finding recipes based on available ingredients, with filtering options and saving favorites.",
-                image: "/api/placeholder/600/400",
+                image: "src/assets/images/recipe.png",
                 tech: ["React.js", "CSS Modules", "Recipe API"]
               },
               {
                 title: "Social Media Dashboard",
                 description: "An admin dashboard for managing social media accounts, with analytics, content scheduling, and engagement tracking.",
-                image: "/api/placeholder/600/400",
+                image: "src/assets/images/dashboard.png",
                 tech: ["React.js", "Tailwind CSS", "Redux", "Chart.js"]
               }
             ].map((project, index) => (
@@ -629,7 +611,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Email</h3>
-                      <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>john.doe@example.com</p>
+                      <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>ravikeerthireddyr@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -641,7 +623,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold">LinkedIn</h3>
-                      <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>linkedin.com/in/johndoe</p>
+                      <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>linkedin.com/in/keerthireddy</p>
                     </div>
                   </div>
                 </div>
@@ -654,7 +636,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold">GitHub</h3>
-                      <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>github.com/johndoe</p>
+                      <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>github.com/keerthireddy</p>
                     </div>
                   </div>
                 </div>
@@ -678,7 +660,7 @@ function App() {
                     <label className="block mb-2 font-medium">Name</label>
                     <input
                       type="text"
-                      placeholder="John Doe"
+                      placeholder="Ravi Keerthi Reddy"
                       className={`w-full px-4 py-3 rounded-lg outline-none ${
                         darkMode 
                           ? 'bg-gray-800 border border-gray-700 focus:border-blue-500' 
@@ -759,7 +741,7 @@ function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold mb-2 md:mb-0">John Doe</h2>
+              <h2 className="text-2xl font-bold mb-2 md:mb-0">Ravi Keerthi Reddy</h2>
             </motion.div>
             
             <motion.div
@@ -803,7 +785,7 @@ function App() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-4 text-center text-gray-400 text-sm"
           >
-            <p>&copy; {new Date().getFullYear()} John Doe. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Ravi Keerthi Reddy. All rights reserved.</p>
           </motion.div>
         </div>
       </footer>
