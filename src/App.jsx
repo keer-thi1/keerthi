@@ -766,7 +766,7 @@ function App() {
                 {/* <GitHub size={20} /> */}
               </motion.a>
               <motion.a
-                href="#"
+                href="https://github.com/keer-thi1"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 className="hover:text-blue-400"
